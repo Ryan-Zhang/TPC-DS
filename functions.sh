@@ -57,7 +57,7 @@ get_version()
 	elif [[ "$VERSION" == *"gpdb"* ]]; then
 		SMALL_STORAGE="appendonly=true, orientation=column"
 		MEDIUM_STORAGE="appendonly=true, orientation=column"
-		LARGE_STORAGE="appendonly=true, orientation=column, compresstype=quicklz"
+		LARGE_STORAGE="appendonly=true, orientation=column, compresstype=zlib, compresslevel=4"
 	else
 		SMALL_STORAGE=""
 		MEDIUM_STORAGE=""
